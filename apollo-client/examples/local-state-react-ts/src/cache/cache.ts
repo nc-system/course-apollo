@@ -1,6 +1,9 @@
+
 import { InMemoryCache, ReactiveVar, makeVar } from "@apollo/client";
-import { Todos } from "./models/Todos";
-import { VisibilityFilter, VisibilityFilters } from "./models/VisibilityFilter";
+
+// Todo List
+import { TypeTodos } from "../context/todo-list/model-todo-list";
+import { VisibilityFilter, VisibilityFilters } from "../context/todo-list/model-visibility-filter";
 
 export const cache: InMemoryCache = new InMemoryCache({
   typePolicies: {
@@ -25,7 +28,7 @@ export const cache: InMemoryCache = new InMemoryCache({
  * Set initial values when we create cache variables.
  */
 
-const todosInitialValue: Todos = [
+const todosInitialValue: TypeTodos = [
   {
     id: 0,
     completed: false,
@@ -33,7 +36,7 @@ const todosInitialValue: Todos = [
   }
 ]
 
-export const todosVar: ReactiveVar<Todos> = makeVar<Todos>(
+export const todosVar: ReactiveVar<TypeTodos> = makeVar<TypeTodos>(
   todosInitialValue
 );
 
