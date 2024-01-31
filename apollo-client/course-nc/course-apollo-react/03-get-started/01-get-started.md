@@ -1,7 +1,6 @@
 
-# Step 1: Setup
+# Get Started with Apollo
 
-    - To start this tutorial, do one of the following:
+    - Hello! 👋 This short tutorial gets you up and running with Apollo Client.
 
-    - Create a new React project locally with Vite, or
-    Create a new React sandbox on CodeSandbox.
+    - For an introduction to the entire Apollo platform, check out Odyssey, Apollo's interactive learning platform.
