@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // Components
-import Monitor from './modules/todo-list/views/Monitor'
-import Control from './modules/todo-list/views/Control'
+import Monitor from './modules/clients/views/Monitor'
+import Control from './modules/clients/views/Control'
 
 function App() {
   const [count, setCount] = useState(0)

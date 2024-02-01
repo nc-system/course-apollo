@@ -2,8 +2,8 @@
 import { InMemoryCache, ReactiveVar, useReactiveVar, makeVar } from "@apollo/client";
 
 // Todo List
-import { TypeTodos } from "../modules/todo-list/data/global-states/tasks/model-todo-list";
-import { VisibilityFilter, VisibilityFilters } from "../modules/todo-list/data/global-states/tasks/model-visibility-filter";
+import { TypeTodos } from "../modules/clients/data/global-states/tasks/model-todo-list";
+import { VisibilityFilter, VisibilityFilters } from "../modules/clients/data/global-states/tasks/model-visibility-filter";
 
 // CACHE
 export const cache: InMemoryCache = new InMemoryCache({
