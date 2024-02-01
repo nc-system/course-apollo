@@ -1,5 +1,5 @@
 
-import { InMemoryCache, ReactiveVar, useReactiveVar, makeVar } from "@apollo/client";
+import { InMemoryCache, ReactiveVar, makeVar } from "@apollo/client";
 
 // Todo List
 import { TypeTodos } from "../modules/clients/data/global-states/tasks/model-todo-list";
@@ -38,7 +38,7 @@ export const cache: InMemoryCache = new InMemoryCache({
  */
 
 
-
+// VARIABLES LOCALES
 export const nombreVar = makeVar('')
 
 export const apellidoVar = makeVar('')
@@ -46,6 +46,8 @@ export const apellidoVar = makeVar('')
 export const edadVar = makeVar(0)
 
 export const estadoCivilVar = makeVar('')
+
+export const gsClientsEstadoCivil = makeVar('')
 
 // const cartItemsVar = makeVar([]);
 // const cartItemIds = [100, 101, 102];
