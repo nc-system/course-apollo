@@ -41,6 +41,8 @@ export const cache: InMemoryCache = new InMemoryCache({
 
 export const nombreVar = makeVar('')
 
+export const apellidoVar = makeVar('')
+
 export const edadVar = makeVar(0)
 
 export const estadoCivilVar = makeVar('')

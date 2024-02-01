@@ -1,13 +1,33 @@
 
 import { useState } from 'react'
-import { nombreVar, edadVar, estadoCivilVar } from '../../../cache/cache'
+import { nombreVar, apellidoVar, edadVar, estadoCivilVar } from '../../../cache/cache'
 
 
 export default function Control() {
 
-    function handleNombre() {
-        nombreVar('Peluche')
+    const [stateNombre, setStateNombre] = useState('')
+    const [stateApellido, setStateApellido] = useState('')
+    
+
+    function onChangeNombre(e) {
+        let inputNombre = e.target.value
+        setStateNombre(inputNombre)
+        // console.log(stateNombre)
     }
+    function handleNombre() {
+        nombreVar(stateNombre)
+    }
+
+
+    function onChangeApellido(e) {
+        let inputApellido = e.target.value
+        setStateApellido(inputApellido)
+        // console.log(stateApellido)
+    }
+    function handleApellido() {
+        apellidoVar(stateApellido)
+    }
+
 
     function handleEdad() {
         edadVar(43)
@@ -19,13 +39,19 @@ export default function Control() {
 
     return(
         <>
-            <h3>Datos Clientes</h3>
+            <h3>Formulario Clientes</h3>
             
             <form>
                 <div>
                     <label htmlFor="name">Nombre</label>
-                    <input type="text" name="" id="name" />
+                    <input type="text" name="" id="name" onChange={onChangeNombre}/>
                     <button onClick={handleNombre} type='button'>Actualizar nombre</button>
+                </div>
+
+                <div>
+                    <label htmlFor="lastname">Apeliido</label>
+                    <input type="text" name="" id="lastname" onChange={onChangeApellido}/>
+                    <button onClick={handleApellido} type='button'>Actualizar apellido</button>
                 </div>
 
                 <div>
