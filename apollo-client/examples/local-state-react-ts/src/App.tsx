@@ -3,11 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// Components
+import Monitor from './modules/todo-list/views/Monitor'
+import Control from './modules/todo-list/views/Control'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Monitor/>
+      <Control/>
+      <hr />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
