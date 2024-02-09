@@ -9,9 +9,10 @@ export default function Control() {
     const [stateApellido, setStateApellido] = useState('')
     
 
-    function onChangeNombre(e) {
-        let inputNombre = e.target.value
-        setStateNombre(inputNombre)
+    function onChangeNombre(e: Event) {
+        const input = e.target as HTMLInputElement 
+        const inputNombre = input
+        setStateNombre(inputNombre.value)
         // console.log(stateNombre)
     }
     function handleNombre() {
@@ -19,9 +20,10 @@ export default function Control() {
     }
 
 
-    function onChangeApellido(e) {
-        let inputApellido = e.target.value
-        setStateApellido(inputApellido)
+    function onChangeApellido(e: Event) {
+        const input = e.target as HTMLInputElement
+        const inputApellido = input
+        setStateApellido(inputApellido.value)
         // console.log(stateApellido)
     }
     function handleApellido() {
